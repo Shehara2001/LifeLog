@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="16dp"
+    android:viewportWidth="32"
+    android:viewportHeight="16">
+    <!-- Film strip body -->
+    <path
+        android:fillColor="@color/film_strip_dark"
+        android:pathData="M0,2h32v12h-32z" />
+    <!-- Film holes -->
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M2,4h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M6,4h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M10,4h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M14,4h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M18,4h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M22,4h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M26,4h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M30,4h2v2h-2z" />
+    <!-- Bottom holes -->
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M2,10h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M6,10h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M10,10h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M14,10h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M18,10h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M22,10h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M26,10h2v2h-2z" />
+    <path
+        android:fillColor="@color/film_strip_holes"
+        android:pathData="M30,10h2v2h-2z" />
+</vector>

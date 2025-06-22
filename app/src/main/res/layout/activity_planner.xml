@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/planner_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background2"
+        android:scaleType="centerCrop"
+        android:contentDescription="Planner Background"
+        android:alpha="0.6" />
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="148dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Yearly Personal Planner\n and Tracker"
+            android:textAlignment="center"
+            android:textColor="#8B0000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Bullet Points -->
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="32dp"
+            android:text="\n- Plan your year\n\n- Track study and hobbies\n\n- Visualize achievements"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#6D4C41"
+            android:paddingStart="32dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="12dp"
+            android:text="Next"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>

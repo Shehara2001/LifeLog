@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+
+
+    <!-- Custom colors for this UI -->
+    <color name="primary_blue">#6366F1</color>
+    <color name="primary_blue_dark">#4F46E5</color>
+    <color name="button_text_unselected">#FF000000</color>
+    <color name="search_button_bg">#9CA3AF</color>
+    <color name="background_gray">#F5F5F5</color>
+
+    <color name="background_color">#F5E6E0</color>
+    <color name="text_primary">#2D3436</color>
+    <color name="text_secondary">#636E72</color>
+
+
+    <!-- Book colors -->
+    <color name="book_blue">#4A90E2</color>
+    <color name="book_red">#E74C3C</color>
+    <color name="book_green">#2ECC71</color>
+    <color name="book_orange">#F39C12</color>
+
+    <!-- Card backgrounds -->
+
+    <color name="goal_card_background">#E8F4FD</color>
+
+    <!-- Progress bar -->
+    <color name="progress_color">#27AE60</color>
+    <color name="progress_background">#DDD</color>
+
+    <!-- FAB -->
+    <color name="fab_color">#E74C3C</color>
+
+    <color name="background_dark">#2C2C2C</color>
+    <color name="background_overlay">#40000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <!-- Movie theme colors -->
+    <color name="movie_blue">#4A90E2</color>
+    <color name="movie_gold">#F4D03F</color>
+    <color name="cinema_brown">#8B4513</color>
+
+    <!-- Tab colors -->
+    <color name="tab_background">#E5E5E5</color>
+    <color name="tab_selected">#4A90E2</color>
+
+    <!-- Card backgrounds -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_background_translucent">#F0FFFFFF</color>
+    <color name="stats_card_background">#E8F4FD</color>
+
+    <!-- Bottom navigation -->
+    <color name="bottom_nav_background">#FFFFFF</color>
+
+    <!-- Film strip -->
+    <color name="film_strip_dark">#1C1C1C</color>
+    <color name="film_strip_holes">#FFFFFF</color>
+</resources>

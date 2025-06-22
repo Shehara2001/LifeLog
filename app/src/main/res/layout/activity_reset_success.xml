@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background5"
+    tools:context=".AddNewBookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Reset Password Title -->
+
+        <!-- Subtitle -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="197dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="0dp"
+            android:contentDescription="LifeLog Logo"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="LifeLog"
+            android:textColor="#171815"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text=" Password Reset\n Successfully"
+            android:textColor="#767A76"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="345dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Your password has been updated successfully.\n You can now sign in with your\n new password."
+            android:textAlignment="center"
+            android:textColor="#534444"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/ContinueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#69A3B7"
+            android:text="Continue to Sign in"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:cornerRadius="0dp" />
+
+        <TextView
+            android:layout_width="345dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="For security, you'll be signed out of all\n devices. "
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</ScrollView>
+

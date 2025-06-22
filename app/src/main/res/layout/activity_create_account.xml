@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Welcome Text -->
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="202dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo" />
+
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Join LifeLog"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start tracking your amazing journey"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Name Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <!-- Name Field -->
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your name"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="text"
+            android:layout_marginTop="4dp" />
+
+        <!-- Email Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="12dp" />
+
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/email1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your email"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="4dp" />
+
+        <!-- Password Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/password1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your password"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="4dp" />
+
+        <!-- Confirm Password Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="12dp" />
+
+        <!-- Confirm Password Field -->
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Confirm your password"
+            android:background="@drawable/edittext_rounded"
+            android:padding="12dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="4dp" />
+
+        <!-- Create Button -->
+        <Button
+            android:id="@+id/create_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#87CEEB"
+            android:text="Create Account"
+            android:textColor="#1A1010" />
+
+
+
+        <!-- Divider -->
+        <TextView
+            android:layout_width="411dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:text="By creating an account, you agree to our Terms &amp; Privacy Policy"
+            android:textAlignment="center"
+            android:textColor="#444444"
+            android:textSize="12sp" />
+
+
+
+    </LinearLayout>
+</ScrollView>
+
