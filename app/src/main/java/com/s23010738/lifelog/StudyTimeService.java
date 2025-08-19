@@ -143,7 +143,14 @@ public class StudyTimeService extends Service {
                 "com.microsoft.office.word",
                 "com.dropbox.android",
                 "org.mozilla.firefox",
-                "com.brave.browser"
+                "com.brave.browser",
+                // Added packages
+                "calculator.currencyconverter.tipcalculator.unitconverter",
+                "calculator.currencyconverter.tipcalculator.unitconverter.ui.splash.SplashActivity",
+                "pdf.pdfreader.viewer.editor.free",
+                "pdf.pdfreader.viewer.editor.free.ReaderLauncherBridgeActivity",
+                "io.paraga.note",
+                "io.paraga.note.MainActivity"
         };
 
         for (UsageStats usageStats : usageStatsMap.values()) {

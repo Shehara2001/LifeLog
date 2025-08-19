@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_bg2"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:gravity="center_vertical">
+
+    <!-- Check Button -->
+    <ImageView
+        android:id="@+id/checkButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_check_circle_outline"
+        android:tint="#D1D5DB"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Title Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <View
+                android:id="@+id/categoryIndicator"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/category_indicator"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/taskText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Complete project report"
+                android:textColor="#111827"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Details Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/priorityChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="high"
+                android:textSize="10sp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:background="@drawable/priority_high_bg"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:id="@+id/timeContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="12dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_clock"
+                    android:tint="#6B7280"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:00 PM"
+                    android:textColor="#6B7280"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/streakContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_star_filled"
+                    android:tint="#EA580C"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/streakText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 days"
+                    android:textColor="#EA580C"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Delete Button -->
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_more_vertical"
+        android:tint="#9CA3AF"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>

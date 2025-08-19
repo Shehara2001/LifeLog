@@ -134,7 +134,7 @@
 
         <!-- Divider -->
         <TextView
-            android:layout_width="411dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginTop="16dp"
             android:text="By creating an account, you agree to our Terms &amp; Privacy Policy"

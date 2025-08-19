@@ -22,6 +22,30 @@ public class MovieTrackerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_tracker);
 
+        // Hide system navigation bar for immersive fullscreen
+        getWindow().getDecorView().setSystemUiVisibility(
+                android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
+        );
+        // Bottom navigation setup
+        findViewById(R.id.navLocation).setOnClickListener(v -> {
+            startActivity(new Intent(MovieTrackerActivity.this, DashboardActivity.class));
+        });
+        findViewById(R.id.goal).setOnClickListener(v -> {
+            startActivity(new Intent(MovieTrackerActivity.this, ActivityGoal.class));
+        });
+        findViewById(R.id.navProfile).setOnClickListener(v -> {
+            startActivity(new Intent(MovieTrackerActivity.this, MapActivity.class));
+        });
+        findViewById(R.id.navScan).setOnClickListener(v -> {
+            startActivity(new Intent(MovieTrackerActivity.this, CalendarActivity.class));
+        });
+        findViewById(R.id.navSetting).setOnClickListener(v -> {
+            startActivity(new Intent(MovieTrackerActivity.this, YearReviewActivity.class));
+        });
+
+
         TextView tabBooks = findViewById(R.id.tab_books);
         TextView tabMovies = findViewById(R.id.tab_movies);
         TextView tabWatched = findViewById(R.id.tab_watched);
@@ -121,6 +145,7 @@ public class MovieTrackerActivity extends AppCompatActivity {
                     intent.putExtra("movie_category", movie.category);
                     intent.putExtra("movie_status", movie.status);
                     intent.putExtra("movie_rating", movie.rating);
+                    intent.putExtra("movie_coverUri", movie.coverUri); // Pass coverUri to preserve photo
                     startActivity(intent);
                 });
                 moviesList.addView(movieView);
@@ -149,7 +174,7 @@ public class MovieTrackerActivity extends AppCompatActivity {
         List<AddNewMovieActivity.Movie> movies = json == null ? new ArrayList<>() : gson.fromJson(json, type);
         List<Movie> result = new ArrayList<>();
         for (AddNewMovieActivity.Movie m : movies) {
-            result.add(new Movie(m.getTitle(), m.getCategory(), m.getStatus(), m.getRating()));
+            result.add(new Movie(m.getTitle(), m.getCategory(), m.getStatus(), m.getRating(), m.getCoverUri()));
         }
         return result;
     }
@@ -159,9 +184,15 @@ public class MovieTrackerActivity extends AppCompatActivity {
         TextView categoryView = movieView.findViewById(R.id.movie_category);
         TextView statusView = movieView.findViewById(R.id.movie_status);
         LinearLayout starsLayout = movieView.findViewById(R.id.stars_layout);
+        ImageView coverView = movieView.findViewById(R.id.movie_cover);
         titleView.setText(movie.title);
         categoryView.setText(movie.category);
         statusView.setText(movie.status);
+        if (movie.coverUri != null) {
+            coverView.setImageURI(android.net.Uri.parse(movie.coverUri));
+        } else {
+            coverView.setImageResource(R.drawable.ic_upload);
+        }
         // Set stars
         for (int i = 0; i < 5; i++) {
             ImageView star = (ImageView) starsLayout.getChildAt(i);
@@ -175,13 +206,14 @@ public class MovieTrackerActivity extends AppCompatActivity {
 
     // Movie model class
     class Movie {
-        String title, category, status;
+        String title, category, status, coverUri;
         int rating;
-        Movie(String title, String category, String status, int rating) {
+        Movie(String title, String category, String status, int rating, String coverUri) {
             this.title = title;
             this.category = category;
             this.status = status;
             this.rating = rating;
+            this.coverUri = coverUri;
         }
     }
 }

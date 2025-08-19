@@ -25,7 +25,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LifeLog"
+        android:theme="@style/AppTheme.FullScreen"
         tools:targetApi="31">
 
         <meta-data
@@ -95,6 +95,27 @@
             android:exported="true"></activity>
         <activity
             android:name=".ScreenTimeActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ActivityGoal"
+            android:exported="true"></activity>
+        <activity
+            android:name=".AchievementActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".AddAchievementsActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".AddGoalActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".YearReviewActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".TodayActivity"
             android:exported="true"></activity>
 
     </application>

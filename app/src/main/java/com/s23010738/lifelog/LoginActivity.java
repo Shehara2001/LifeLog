@@ -19,17 +19,34 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Hide system navigation bar for immersive fullscreen
+        getWindow().getDecorView().setSystemUiVisibility(
+                android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
+        );
+
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         signInBtn = findViewById(R.id.signin_button);
         createAccountBtn = findViewById(R.id.create_account_button);
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
 
         signInBtn.setOnClickListener(v -> {
             String emailVal = email.getText().toString();
             String passVal = password.getText().toString();
-            Toast.makeText(this, "Signing in as " + emailVal, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-            startActivity(intent);
+            if (emailVal.isEmpty() || passVal.isEmpty()) {
+                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (dbHelper.checkUser(emailVal, passVal)) {
+                Toast.makeText(this, "Signing in as " + emailVal, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+            }
         });
         forgotPassword = findViewById(R.id.forgot_password);
         forgotPassword.setOnClickListener(view -> {
@@ -45,4 +62,3 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 }
-

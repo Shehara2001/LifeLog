@@ -30,6 +30,33 @@ public class BookTrackerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_tracker);
 
+        // Save reading goal to SharedPreferences
+        SharedPreferences prefs = getSharedPreferences("books_prefs", MODE_PRIVATE);
+        prefs.edit().putInt("reading_goal", READING_GOAL).apply();
+
+        // Hide system navigation bar for immersive fullscreen
+        getWindow().getDecorView().setSystemUiVisibility(
+                android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
+        );
+        // Bottom navigation setup
+        findViewById(R.id.navLocation).setOnClickListener(v -> {
+            startActivity(new Intent(BookTrackerActivity.this, DashboardActivity.class));
+        });
+        findViewById(R.id.goal).setOnClickListener(v -> {
+            startActivity(new Intent(BookTrackerActivity.this, ActivityGoal.class));
+        });
+        findViewById(R.id.navProfile).setOnClickListener(v -> {
+            startActivity(new Intent(BookTrackerActivity.this, MapActivity.class));
+        });
+        findViewById(R.id.navScan).setOnClickListener(v -> {
+            startActivity(new Intent(BookTrackerActivity.this, CalendarActivity.class));
+        });
+        findViewById(R.id.navSetting).setOnClickListener(v -> {
+            startActivity(new Intent(BookTrackerActivity.this, YearReviewActivity.class));
+        });
+
         // Initialize views
         tabReading = findViewById(R.id.tab_reading);
         tabCompleted = findViewById(R.id.tab_completed);

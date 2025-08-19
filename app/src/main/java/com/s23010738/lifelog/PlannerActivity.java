@@ -13,6 +13,13 @@ public class PlannerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
 
+        // Hide system navigation bar for immersive fullscreen
+        getWindow().getDecorView().setSystemUiVisibility(
+                android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
+        );
+
         nextBtn = findViewById(R.id.next_button);
 
         nextBtn.setOnClickListener(v -> {
@@ -21,4 +28,3 @@ public class PlannerActivity extends AppCompatActivity {
         });
     }
 }
-

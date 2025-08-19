@@ -9,11 +9,16 @@
     android:gravity="center_vertical">
 
     <ImageView
-        android:layout_width="12dp"
-        android:layout_height="12dp"
-        android:src="@drawable/ic_movie"
+        android:id="@+id/movie_cover"
+        android:layout_width="48dp"
+        android:layout_height="64dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_upload"
         android:layout_marginEnd="12dp"
-        android:tint="@color/movie_blue" />
+        android:background="@drawable/upload_background"
+        android:contentDescription="Movie Cover" />
+
+
 
     <LinearLayout
         android:layout_width="0dp"

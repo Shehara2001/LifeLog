@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#E8F4FD">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendar and planner"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"
+                android:gravity="center" />
+
+            <!-- Tab Layout -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/tab_background"
+                android:padding="4dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Calendar Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/card_bg"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="2dp"
+            android:clipToPadding="false">
+
+            <!-- Month & Year Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/prev_year"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_arrow_left"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="4dp" />
+
+                <ImageView
+                    android:id="@+id/prev_month"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_arrow_left"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/month_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="June 2025"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp" />
+
+                <ImageView
+                    android:id="@+id/next_month"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_arrow_right"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="4dp" />
+
+                <ImageView
+                    android:id="@+id/next_year"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_arrow_right"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Days of Week Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sun" android:textSize="13sp" android:textColor="#666666" android:gravity="center" android:textStyle="bold" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Mon" android:textSize="13sp" android:textColor="#666666" android:gravity="center" android:textStyle="bold" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tue" android:textSize="13sp" android:textColor="#666666" android:gravity="center" android:textStyle="bold" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Wed" android:textSize="13sp" android:textColor="#666666" android:gravity="center" android:textStyle="bold" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Thu" android:textSize="13sp" android:textColor="#666666" android:gravity="center" android:textStyle="bold" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Fri" android:textSize="13sp" android:textColor="#666666" android:gravity="center" android:textStyle="bold" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sat" android:textSize="13sp" android:textColor="#666666" android:gravity="center" android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Calendar Grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendar_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:paddingBottom="8dp"
+                android:clipToPadding="false"
+                android:layout_marginBottom="4dp" />
+
+        </LinearLayout>
+
+        <!-- Upcoming Events Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Events"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp" />
+
+            <LinearLayout
+                android:id="@+id/events_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation absolutely at the bottom -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="#FDFDFD"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/navLocation"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/home" />
+        <ImageView
+            android:id="@+id/goal"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_goal" />
+        <ImageView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_location" />
+        <ImageView
+            android:id="@+id/navScan"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_planner" />
+        <ImageView
+            android:id="@+id/navSetting"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_status" />
+    </LinearLayout>
+
+</FrameLayout>

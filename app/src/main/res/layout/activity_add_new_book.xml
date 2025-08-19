@@ -21,12 +21,12 @@
 
             <!-- Header -->
             <TextView
-                android:layout_width="357dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="32dp"
                 android:text="Add New Book"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="@android:color/black"
                 android:textSize="28sp"
                 android:textStyle="bold" />
